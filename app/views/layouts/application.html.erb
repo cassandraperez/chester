@@ -44,6 +44,13 @@
        <br class="clear" />
 
        <div class="container">
+          <% if flash[:error].present? %>
+            <div class="alert alert-danger" role="alert">
+              <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+              <%= flash[:error].html_safe %>
+            </div>
+         </div>
+      <% end %>
  
 
     <%= yield %>
